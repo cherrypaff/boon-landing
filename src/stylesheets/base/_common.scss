@@ -1,0 +1,66 @@
+@include font-face('Montserrat', '/static/fonts/Montserrat/MontserratAlternates-Regular', normal, normal, ttf);
+@include font-face('Montserrat', '/static/fonts/Montserrat/MontserratAlternates-Bold', bold, normal, ttf);
+
+* {
+  transition: all 200ms ease;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input, select, textarea, button {
+  font-family:inherit;
+}
+
+.h1 {
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0;
+
+  @include media('>=desktop') {
+    font-size: 48px;
+    line-height: 59px;
+  }
+}
+
+.h2 {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+
+  @include media('>=desktop') {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+label, p, input, select, textarea, button {
+  font-size: 12px;
+  line-height: 15px;
+
+  @include media('>=desktop') {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+input, select, textarea, button {
+  &:focus {
+    outline: none
+  }
+}
+
+textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none;
+}

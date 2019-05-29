@@ -1,0 +1,16 @@
+.arrow {
+  width: 21px;
+  height: 41px;
+  cursor: pointer;
+  fill: #949799;
+
+  &:hover {
+    fill: #292F33;
+  }
+
+  &--left {
+    transform: rotate(180deg);
+  }
+
+  transition: all 20ms ease;
+}

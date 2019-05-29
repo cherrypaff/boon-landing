@@ -1,0 +1,43 @@
+.screenshots {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px 0;
+
+  @include media('>=tablet') {
+    padding: 40px 0;
+  }
+
+  @include media('>=desktop') {
+    padding: 60px 0;
+  }
+
+  &__title {
+    text-align: center;
+    width: 333px;
+
+    @include media('>=tablet') {
+      width: 379px;
+      text-align: left;
+    }
+
+    @include media('>=desktop') {
+      width: 568px;
+      text-align: left;
+    }
+  }
+
+  &__slider {
+    margin: 12px 0 0;
+
+    @include media('>=tablet') {
+      margin: 24px 0 0;
+    }
+
+    @include media('>=desktop') {
+      margin: 32px 0 0;
+    }
+  }
+}

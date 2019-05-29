@@ -1,0 +1,138 @@
+.form {
+  width: 320px;
+
+  @include media('>=tablet') {
+    width: 464px;
+  }
+
+  @include media('>=desktop') {
+    width: 600px;
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  &--bordered-input {
+    .form__input, .form__submit-button:disabled {
+      border: 1px solid rgba(41, 47, 51, 0.5);
+    }
+
+    .form__label {
+      background-color: white;
+    }
+  }
+
+  &__input-group-wrapper{
+    position: relative;
+    margin-bottom: 24px;
+
+    @include media('>=desktop') {
+      margin-bottom: 32px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--required {
+      .form__required-field-image {
+        display: block;
+      }
+    }
+
+    &--correct {
+      .form__input {
+        border-color: #6ACAB0;
+      }
+
+      .form__label {
+        display: block;
+        color: #6ACAB0;
+      }
+    }
+
+    &--wrong {
+      .form__input {
+        border-color: #FF4A5E;
+      }
+
+      .form__label {
+        display: block;
+        color: #FF4A5E;
+      }
+
+      .form__error-text {
+        display: block;
+      }
+    }
+  }
+
+  &__input-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__input {
+    height: 48px;
+    padding: 16px 12px;
+    background-color: white;
+    border-radius: 8px;
+    border-width: 0;
+  }
+
+  &__input--big-text {
+    height: 152px;
+  }
+
+  &__error-text {
+    display: none;
+    position: absolute;
+    left: 12px;
+    bottom: -2.2em;
+    color: #FF4A5E;
+  }
+
+  &__label {
+    display: none;
+    position: absolute;
+    top: -0.75em;
+    left: 9px;
+
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  &__required-field-image {
+    display: none;
+    position: absolute;
+    top: 12px;
+    right: 14px;
+
+    width: 20px;
+    height: 20px;
+  }
+
+  &__submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    padding: 16px 12px;
+    border-radius: 8px;
+    width: 156px;
+    text-transform: uppercase;
+
+    background-color: #6ACAB0;
+    color: white;
+    border-width: 0;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: pointer;
+      color: black;
+      background-color: white;
+    }
+  }
+}

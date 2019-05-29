@@ -1,0 +1,44 @@
+.reviews {
+  background-color: rgba(106, 202, 176, 0.2);
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  @include media('>=desktop') {
+    padding: 40px 0;
+  }
+
+  &__mainikin {
+    display: none;
+
+    @include media('>=desktop') {
+      display: inline;
+      align-self: flex-end;
+      margin-left: 195px;
+      margin-bottom: 58px;
+    }
+  }
+
+  &__title {
+    width: 320px;
+
+    @include media('>=tablet') {
+      width: 464px;
+    }
+
+    @include media('>=desktop') {
+      width: 600px;
+    }
+  }
+
+  &__title-main-part {
+    font-weight: bold;
+  }
+
+  &__form {
+    margin-top: 24px;
+
+    @include media('>=desktop') {
+      margin-top: 32px;
+    }
+  }
+}

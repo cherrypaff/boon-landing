@@ -1,0 +1,14 @@
+.logo {
+  width: 70px;
+  height: 19px;
+
+  @include media('>=tablet') {
+      width: 120px;
+      height: 32px;
+  }
+
+  @include media('>=desktop') {
+      width: 185px;
+      height: 49px;
+  }
+}

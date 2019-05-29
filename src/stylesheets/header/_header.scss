@@ -1,0 +1,125 @@
+$main-text-block-desktop-width: 486px;
+
+.header {
+  padding: 0 0 24px;
+
+  @include media('>=desktop') {
+    padding: 0 0 60px;
+  }
+
+  &__logo {
+    margin-top: 24px;
+    margin-left: 20px;
+
+    @include media('>tablet') {
+      margin-top: 40px;
+      margin-left: 24px;
+    }
+  }
+
+  &__content {
+    margin-top: 39px;
+
+    @include media('>=tablet') {
+      margin-top: 50px;
+    }
+
+    @include media('>=desktop') {
+      margin-top: 91px;
+    }
+  }
+
+  &__main-content-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media('>=desktop') {
+      justify-content: center;
+      flex-direction: row;
+    }
+  }
+
+  &__main-text-block {
+    // Без этого в IE будет не работать
+    width: 100%;
+    text-align: center;
+  }
+
+  &__mainikins-block {
+    @include media('>=desktop') {
+      margin-bottom: 70px;
+    }
+  }
+
+  &__mainikin {
+    @include media('>=desktop') {
+      align-self: flex-end;
+    }
+
+    &:nth-of-type(1) {
+      margin-right: 10px;
+    }
+
+    &:nth-of-type(2) {
+      margin-right: 0;
+      margin-bottom: -4px;
+
+      @include media('>=tablet') {
+        margin-right: -19px;
+        margin-bottom: -5px;
+      }
+
+      @include media('>=desktop') {
+        margin-right: -25px;
+        margin-bottom: -7px;
+      }
+    }
+
+    &:nth-of-type(3) {
+      display: none;
+
+      @include media('>=tablet') {
+        display: inline;
+      }
+    }
+  }
+
+  &__main-text-block-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 320px;
+    margin: 0 0 16px 0;
+
+    @include media('>=tablet') {
+      width: 360px;
+      margin: 0 0 25px 0;
+    }
+
+    @include media('>=desktop') {
+      margin: 0 42px 0 0;
+      width: 486px;
+    }
+  }
+
+  &__stores-buttons-under-mainikins {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+
+    @include media('>=desktop') {
+      display: none;
+    }
+  }
+
+  &__stores-buttons-under-text {
+    display: none;
+
+    @include media('>=desktop') {
+      display: block;
+      margin-top: 40px;
+    }
+  }
+}

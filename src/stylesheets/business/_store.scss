@@ -1,0 +1,9 @@
+.store-image {
+  width: 159px;
+  height: 159px;
+
+  @include media('>=desktop') {
+    width: 291px;
+    height: 291px;
+  }
+}

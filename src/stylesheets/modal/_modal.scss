@@ -1,0 +1,138 @@
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(41, 47, 51, 0.3); /* Black w/ opacity */
+
+  &--active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    padding: 24px 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    animation-name: slide-from-top;
+    animation-duration: 0.4s;
+
+    @include media('>=tablet') {
+      width: 600px;
+      padding: 32px 0;
+    }
+
+    @include media('>=desktop') {
+      width: 838px;
+      padding: 40px 0;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    width: 20px;
+    height: 20px;
+
+    @include media('>=tablet') {
+      width: 26px;
+      height: 26px;
+      right: 34px;
+      top: 22px;
+    }
+
+    @include media('>=desktop') {
+      width: 33px;
+      height: 33px;
+      right: 20px;
+      top: 20px;
+    }
+
+  }
+
+  &__title {
+    text-align: center;
+    width: 320px;
+
+    @include media('>=tablet') {
+      width: 456px;
+    }
+
+    @include media('>=desktop') {
+      width: 652px;
+    }
+  }
+
+  &__title-main-part {
+    font-weight: normal;
+  }
+
+  &__form {
+    margin-top: 12px;
+
+    @include media('>=tablet') {
+      margin-top: 24px;
+    }
+
+    @include media('>=desktop') {
+      margin-top: 32px;
+    }
+  }
+
+  // ToDo: отступ для формы
+  &__info-image {
+    margin-top: 24px;
+    width: 120px;
+    height: 120px;
+
+    @include media('>=tablet') {
+      width: 140px;
+      height: 140px;
+    }
+
+    @include media('>=desktop') {
+      width: 180px;
+      height: 180px;
+    }
+  }
+
+  &__loading-image {
+    margin-top: 74px;
+    margin-bottom: 74px;
+    width: 80px;
+    height: 80px;
+
+    @include media('>=tablet') {
+      margin-top: 34px;
+      margin-bottom: 34px;
+      width: 120px;
+      height: 120px;
+    }
+
+    @include media('>=desktop') {
+      margin-top: 34px;
+      margin-bottom: 34px;
+      width: 140px;
+      height: 140px;
+    }
+  }
+}
+
+@keyframes slide-from-top {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}

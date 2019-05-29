@@ -1,0 +1,49 @@
+.store-buttons {
+  &__google-image {
+    width: 105px;
+    height: 31px;
+
+    @include media('>=tablet') {
+      width: 137px;
+      height: 40px;
+    }
+
+    @include media('>=desktop') {
+      width: 157px;
+      height: 47px;
+    }
+  }
+
+  &__apple-image {
+    width: 92px;
+    height: 31px;
+
+    @include media('>=tablet') {
+      width: 120px;
+      height: 40px;
+    }
+
+    @include media('>=desktop') {
+      width: 140px;
+      height: 47px;
+    }
+  }
+
+
+  .store-buttons__button {
+    display: inline-block;
+    margin-right: 17px;
+
+    @include media('>=tablet') {
+      margin-right: 24px;
+    }
+
+    @include media('>=desktop') {
+      margin-right: 46px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

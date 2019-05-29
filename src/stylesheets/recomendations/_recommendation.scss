@@ -1,0 +1,26 @@
+.recommendation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__text {
+    text-align: center;
+    width: 144px;
+    margin-top: 12px;
+    margin-bottom: 0;
+
+    @include media('>=desktop') {
+      width: 200px;
+    }
+  }
+
+  &__image {
+    width: 120px;
+    height: 120px;
+
+    @include media('>=desktop') {
+      width: 140px;
+      height: 140px;
+    }
+  }
+}

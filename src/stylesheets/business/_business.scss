@@ -1,0 +1,92 @@
+.business {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+
+  @include media('>=tablet') {
+    padding: 40px 0;
+  }
+
+  @include media('>=desktop') {
+    padding: 60px 0;
+  }
+
+  &__main-content {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title {
+    width: 320px;
+
+    @include media('>=tablet') {
+      width: 464px;
+    }
+
+    @include media('>=desktop') {
+      width: 600px;
+    }
+  }
+
+  &__title-main-part {
+    font-weight: bold;
+  }
+
+  &__form {
+    margin-top: 24px;
+
+    @include media('>=desktop') {
+      display: flex;
+      margin-top: 32px;
+    }
+  }
+
+  &__store-buttons-wrapper {
+    display: flex;
+    margin-top: 24px;
+
+    @include media('>=desktop') {
+      margin-top: 40px;
+    }
+  }
+
+  &__store-buttons {
+    @include media('>=tablet') {
+      align-self: flex-end;
+      margin-bottom: 13px;
+    }
+  }
+
+  &__store-image-bottom {
+    display: none;
+
+    @include media('>=tablet') {
+      display: inline;
+      margin-left: 24px;
+    }
+
+    @include media('>=desktop') {
+      display: none;
+    }
+  }
+
+  &__store-image {
+    display: none;
+    @include media('>=desktop') {
+      align-self: flex-end;
+      display: inline;
+      margin-bottom: 39px;
+    }
+  }
+
+  &__mainikin {
+    display: none;
+    @include media('>=desktop') {
+      align-self: flex-end;
+      display: inline;
+      margin-left: 48px;
+      margin-bottom: 60px;
+    }
+  }
+}
